@@ -2,7 +2,7 @@
 #define ASTERIOD_H
 
 #include "SDL.h"
-#include "GameObject.h"
+#include "game_object.h"
 
 class Asteriod : public GameObject {
     public:

@@ -1,5 +1,5 @@
 #include "snake.h"
-#include "GameObject.h"
+#include "game_object.h"
 #include <cmath>
 #include <iostream>
 

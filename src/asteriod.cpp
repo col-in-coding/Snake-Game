@@ -1,5 +1,5 @@
 #include "Asteriod.h"
-#include "GameObject.h"
+#include "game_object.h"
 
 #include "SDL.h"
 
