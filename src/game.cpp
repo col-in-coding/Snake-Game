@@ -57,6 +57,7 @@ void Game::PlaceFood() {
     y = random_h(engine);
     // Check that the location is not occupied by a snake item before placing
     // food.
+    std::cout << "place food: " << x << ' ' << y << std::endl;
     if (!snake.SnakeCell(x, y)) {
       food.x = x;
       food.y = y;

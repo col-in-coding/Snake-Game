@@ -3,38 +3,31 @@
 
 #include <vector>
 #include "SDL.h"
+#include "GameObject.h"
 
-class Snake {
+class Snake : public GameObject {
  public:
-  enum class Direction { kUp, kDown, kLeft, kRight };
-
-  Snake(int grid_width, int grid_height)
-      : grid_width(grid_width),
-        grid_height(grid_height),
-        head_x(grid_width / 2),
-        head_y(grid_height / 2) {}
+  Snake(int grid_w, int grid_h)
+      : head_x(grid_w / 2),
+        head_y(grid_h / 2)
+      {
+          grid_width = grid_w;
+          grid_height = grid_h;
+      }
 
   void Update();
 
   void GrowBody();
   bool SnakeCell(int x, int y);
 
-  Direction direction = Direction::kUp;
-
-  float speed{0.1f};
   int size{1};
   bool alive{true};
   float head_x;
   float head_y;
-  std::vector<SDL_Point> body;
 
  private:
   void UpdateHead();
   void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell);
-
-  bool growing{false};
-  int grid_width;
-  int grid_height;
 };
 
 #endif
