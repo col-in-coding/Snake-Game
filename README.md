@@ -43,9 +43,10 @@ The playing of this snake game is pretty like the traditional one, but with the 
 
 2. Loops, Functions, I/O  
 - [x] The project demonstrates an understanding of C++ functions and control structures  
-- [ ] The project reads data from a file and process the data, or the program writes data to a file  
+- [x] The project reads data from a file and process the data, or the program writes data to a file  
     * *main.cpp*  
-- [ ] The project accepts user input and processes the input  
+- [x] The project accepts user input and processes the input  
+    * *main.cpp*  
 
 3. Object Oriented Programming  
 - [x] The project uses Object Oriented Programming techniques  

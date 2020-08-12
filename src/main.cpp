@@ -13,7 +13,9 @@ int main() {
   constexpr std::size_t kGridWidth{32};
   constexpr std::size_t kGridHeight{32};
 
-  std::string player{"Colin"};
+  std::string player;
+  std::cout << "Please input your name: ";
+  std::cin >> player;
 
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
   Controller controller;
