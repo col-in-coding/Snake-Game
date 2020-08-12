@@ -67,7 +67,7 @@ The playing of this snake game is pretty like the traditional one, but with the 
 - [x] The project uses smart pointers instead of raw pointers
 
 5. Concurrency  
-[ ] The project uses multithreading  
-[ ] Promise and future is used in the project  
-[ ] A mutex or lock is used in the project  
-[ ] A condition variable is used in the project  
+- [ ] The project uses multithreading  
+- [ ] Promise and future is used in the project  
+- [ ] A mutex or lock is used in the project  
+- [ ] A condition variable is used in the project  
