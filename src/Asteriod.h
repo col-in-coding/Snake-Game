@@ -2,20 +2,18 @@
 #define ASTERIOD_H
 
 #include "SDL.h"
+#include "GameObject.h"
 
-class asteriod
-{
-public:
-    asteriod(int grid_width, int grid_height)
-        : grid_width(grid_width),
-          grid_height(grid_height),
-          head_x(grid_width / 2),
-          head_y(grid_height / 2);
-    
-    void Update();
+class Asteriod : public GameObject {
+    public:
+        Asteriod(int grid_w, int grid_h);
 
-private:
-    /* data */
+        void Update();
+    private:
+        SDL_Point NewAsteriod();
+
 };
+
+#endif
 
 
