@@ -36,34 +36,35 @@ The playing of this snake game is pretty like the traditional one, but with the 
 ## rubic points addressed  
 
 1. README  
-[x] A README with instructions is included with the project  
-[ ] The README indicates which project is chosen  
-[ ] The README includes information about each rubric point addressed  
-[x] The submission must compile and run  
+-[x] A README with instructions is included with the project  
+-[ ] The README indicates which project is chosen  
+-[ ] The README includes information about each rubric point addressed  
+-[x] The submission must compile and run  
 
 2. Loops, Functions, I/O  
-[x] The project demonstrates an understanding of C++ functions and control structures  
-[ ] The project reads data from a file and process the data, or the program writes data to a file  
-[ ] The project accepts user input and processes the input  
+-[x] The project demonstrates an understanding of C++ functions and control structures  
+-[ ] The project reads data from a file and process the data, or the program writes data to a file  
+    * *main.cpp*
+-[ ] The project accepts user input and processes the input  
 
 3. Object Oriented Programming  
-[x] The project uses Object Oriented Programming techniques  
-[x] Classes use appropriate access specifiers for class members  
-[x] Class constructors utilize member initialization list  
-[ ] Classes abstract implementation details from their interfaces  
-[x] Classes encapsulate behavior  
-[x] Classes follow an appropriate inheritance hierarchy  
-[ ] Overloaded functions allow the same function to operate on different parameters  
-[ ] Derived class functions override virtual base class function  
-[ ] Templates generalize functions in the project  
+-[x] The project uses Object Oriented Programming techniques  
+-[x] Classes use appropriate access specifiers for class members  
+-[x] Class constructors utilize member initialization list  
+-[ ] Classes abstract implementation details from their interfaces  
+-[x] Classes encapsulate behavior  
+-[x] Classes follow an appropriate inheritance hierarchy  
+-[ ] Overloaded functions allow the same function to operate on different parameters  
+-[ ] Derived class functions override virtual base class function  
+-[ ] Templates generalize functions in the project  
 
 4. Memory Management  
-[ ] The project makes use of references in function declarations  
-[ ] The project uses destructors approprately  
-[ ] The project uses scope Resource Acquisition Is Initialization (RAII) where appropriate  
-[ ] The project follows the Rule of 5  
-[ ] The project uses move semantics to move data, instead of copying it, where possible
-[x] The project uses smart pointers instead of raw pointers
+-[ ] The project makes use of references in function declarations  
+-[ ] The project uses destructors approprately  
+-[ ] The project uses scope Resource Acquisition Is Initialization (RAII) where appropriate  
+-[ ] The project follows the Rule of 5  
+-[ ] The project uses move semantics to move data, instead of copying it, where possible
+-[x] The project uses smart pointers instead of raw pointers
 
 5. Concurrency  
 [ ] The project uses multithreading  

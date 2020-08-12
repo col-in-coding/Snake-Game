@@ -7,7 +7,7 @@
 #include "controller.h"
 #include "renderer.h"
 #include "snake.h"
-#include "Asteriod.h"
+#include "asteriod.h"
 
 class Game
 {
@@ -19,8 +19,8 @@ public:
   int GetSize() const;
 
 private:
+  // data handle (owned)
   std::unique_ptr<Snake> _snake;
-
   SDL_Point food;
 
   std::random_device dev;

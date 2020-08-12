@@ -1,4 +1,4 @@
-#include "Asteriod.h"
+#include "asteriod.h"
 #include "game_object.h"
 
 #include "SDL.h"
