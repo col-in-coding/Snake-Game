@@ -6,6 +6,7 @@
 
 enum class Direction { kUp, kDown, kLeft, kRight };
 
+
 class GameObject
 {
 public:
@@ -15,6 +16,7 @@ public:
 
 protected:
     bool growing{false};
+
     int grid_width;
     int grid_height;
 };

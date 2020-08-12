@@ -30,7 +30,7 @@ int main() {
   {    
     file_writer << player << "\tScore:" << game.GetScore() << "\n";
     file_writer.close();
-    std::cout << "Scores saved to scores.txt" << "\n";
+    std::cout << "Your score is saved into scores.txt" << "\n";
   }
   return 0;
 }

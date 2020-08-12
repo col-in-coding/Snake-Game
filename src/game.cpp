@@ -70,7 +70,7 @@ void Game::PlaceFood() {
 void Game::Update() {
   if (!_snake->alive) return;
 
-  _snake->Update();
+  _snake->Move();
 
   int new_x = static_cast<int>(_snake->head_x);
   int new_y = static_cast<int>(_snake->head_y);

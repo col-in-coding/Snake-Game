@@ -15,7 +15,7 @@ class Snake : public GameObject {
           grid_height = grid_h;
       }
 
-  void Update();
+  void Move();
 
   void GrowBody();
   bool SnakeCell(int x, int y);
@@ -26,8 +26,8 @@ class Snake : public GameObject {
   float head_y;
 
  private:
-  void UpdateHead();
-  void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell);
+  void MoveHead();
+  void Move(SDL_Point &current_cell, SDL_Point &prev_cell);
 };
 
 #endif

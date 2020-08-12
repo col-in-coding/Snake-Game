@@ -52,11 +52,14 @@ The playing of this snake game is pretty like the traditional one, but with the 
 - [x] The project uses Object Oriented Programming techniques  
 - [x] Classes use appropriate access specifiers for class members  
 - [x] Class constructors utilize member initialization list  
-- [ ] Classes abstract implementation details from their interfaces  
+- [x] Classes abstract implementation details from their interfaces  
 - [x] Classes encapsulate behavior  
 - [x] Classes follow an appropriate inheritance hierarchy  
-- [ ] Overloaded functions allow the same function to operate on different parameters  
-- [ ] Derived class functions override virtual base class function  
+    * *game_object.h* 
+- [x] Overloaded functions allow the same function to operate on different parameters 
+    * *snake.cpp* 
+- [ ] Derived class functions override virtual base class function 
+    * *game_object.h* 
 - [ ] Templates generalize functions in the project  
 
 4. Memory Management  
