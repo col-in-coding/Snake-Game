@@ -14,6 +14,8 @@ public:
     std::vector<SDL_Point> body;
     float speed{0.1f};
 
+    virtual void Move() = 0;
+
 protected:
     bool growing{false};
 
