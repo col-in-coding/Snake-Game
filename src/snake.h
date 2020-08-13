@@ -5,29 +5,33 @@
 #include "SDL.h"
 #include "game_object.h"
 
-class Snake : public GameObject {
- public:
-  Snake(int grid_w, int grid_h)
-      : head_x(grid_w / 2),
-        head_y(grid_h / 2)
-      {
-          grid_width = grid_w;
-          grid_height = grid_h;
-      }
+class Snake : public GameObject
+{
+public:
+    Snake(int grid_w, int grid_h);
 
-  void Move();
+    // getter and setter
+    Color *GetBodyColor(){return _bodyColor.get();}
+    Color *GetHeadColor(){return _headColor.get();}
 
-  void GrowBody();
-  bool SnakeCell(int x, int y);
+    void Move();
 
-  int size{1};
-  bool alive{true};
-  float head_x;
-  float head_y;
+    void GrowBody();
+    bool SnakeCell(int x, int y);
 
- private:
-  void MoveHead();
-  void Move(SDL_Point &current_cell, SDL_Point &prev_cell);
+    int size{1};
+    bool alive{true};
+
+    float head_x;
+    float head_y;
+
+private:
+    // data handles (owned)
+    std::unique_ptr<Color> _headColor;
+
+    void MoveHead();
+    void Move(SDL_Point &current_cell, SDL_Point &prev_cell);
+    void SetColor();
 };
 
 #endif

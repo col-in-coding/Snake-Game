@@ -51,7 +51,8 @@ The playing of this snake game is pretty like the traditional one, but with the 
 3. Object Oriented Programming  
 - [x] The project uses Object Oriented Programming techniques  
 - [x] Classes use appropriate access specifiers for class members  
-- [x] Class constructors utilize member initialization list  
+- [x] Class constructors utilize member initialization list 
+    * *game_object.h  line 9* 
 - [x] Classes abstract implementation details from their interfaces  
 - [x] Classes encapsulate behavior  
 - [x] Classes follow an appropriate inheritance hierarchy  
@@ -63,12 +64,16 @@ The playing of this snake game is pretty like the traditional one, but with the 
 - [ ] Templates generalize functions in the project  
 
 4. Memory Management  
-- [ ] The project makes use of references in function declarations  
+- [x] The project makes use of references in function declarations  
+    * *snake.cpp Move(SDL_Point &current_head_cell, SDL_Point &prev_head_cell)*
 - [ ] The project uses destructors approprately  
 - [ ] The project uses scope Resource Acquisition Is Initialization (RAII) where appropriate  
 - [ ] The project follows the Rule of 5  
-- [ ] The project uses move semantics to move data, instead of copying it, where possible
+- [x] The project uses move semantics to move data, instead of copying it, where possible
+    * *snake.cpp SetColor*
 - [x] The project uses smart pointers instead of raw pointers
+    * *game_object.h*
+    * *snake.h*
 
 5. Concurrency  
 - [ ] The project uses multithreading  
