@@ -15,9 +15,12 @@ public:
     Color *GetHeadColor(){return _headColor.get();}
     void UpdateHeadColor(Color *color);
 
+    // Move the Snake. (override virtual function)
     void Move();
 
     void GrowBody();
+
+    // If is Snake Cell
     bool SnakeCell(int x, int y);
 
     int size{1};
@@ -31,7 +34,11 @@ private:
     std::unique_ptr<Color> _headColor;
 
     void MoveHead();
+
+    // Move Body
     void Move(SDL_Point &current_cell, SDL_Point &prev_cell);
+    
+    // overwrite the SetColor from GameObject
     void SetColor();
 };
 

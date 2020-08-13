@@ -7,7 +7,9 @@ Snake::Snake(int grid_w, int grid_h) : GameObject(grid_w, grid_h)
 {
     head_x = grid_w / 2;
     head_y = grid_h / 2;
+
     SetColor();
+    _speed = 0.1f;
 }
 
 void Snake::Move()
@@ -34,19 +36,19 @@ void Snake::MoveHead()
     switch (direction)
     {
     case Direction::kUp:
-        head_y -= speed;
+        head_y -= _speed;
         break;
 
     case Direction::kDown:
-        head_y += speed;
+        head_y += _speed;
         break;
 
     case Direction::kLeft:
-        head_x -= speed;
+        head_x -= _speed;
         break;
 
     case Direction::kRight:
-        head_x += speed;
+        head_x += _speed;
         break;
     }
 

@@ -28,14 +28,19 @@ public:
         :grid_width(grid_width), grid_height(grid_height){}
     Direction direction = Direction::kUp;
     std::vector<SDL_Point> body;
-    float speed{0.1f};
+    
+    // getter and setter
+    void SetColor(std::unique_ptr<Color> color){_bodyColor = std::move(color);}
+    float GetSpeed(){return _speed;}
+    void SetSpeed(const float speed){_speed = speed;}
+    void SpeedUp() {_speed += 0.02;}
 
+    // Pure virtual function for the abstract class
     virtual void Move() = 0;
-    void setColor(std::unique_ptr<Color> color){_bodyColor = std::move(color);}
 
 protected:
     bool growing{false};
-
+    float _speed;
     int grid_width;
     int grid_height;
     std::unique_ptr<Color> _bodyColor;

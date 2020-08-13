@@ -44,9 +44,9 @@ The playing of this snake game is pretty like the traditional one, but with the 
 2. Loops, Functions, I/O  
 - [x] The project demonstrates an understanding of C++ functions and control structures  
 - [x] The project reads data from a file and process the data, or the program writes data to a file  
-    * *main.cpp*  
+    * *main.cpp  line 28*  
 - [x] The project accepts user input and processes the input  
-    * *main.cpp*  
+    * *main.cpp  line 17*  
 
 3. Object Oriented Programming  
 - [x] The project uses Object Oriented Programming techniques  
@@ -55,13 +55,14 @@ The playing of this snake game is pretty like the traditional one, but with the 
     * *game_object.h  line 13* 
 - [x] Classes abstract implementation details from their interfaces  
 - [x] Classes encapsulate behavior  
-    * *snake.h  line 14, line 15*
+    * *game_object.h line 33-36*
+    * *snake.h  line 14-15*
 - [x] Classes follow an appropriate inheritance hierarchy  
     * *game_object.h* 
 - [x] Overloaded functions allow the same function to operate on different parameters 
-    * *snake.cpp* 
+    * *snake.h  line 36* 
 - [x] Derived class functions override virtual base class function 
-    * *game_object.h* 
+    * *game_object.h  line 39* 
 - [ ] Templates generalize functions in the project  
 
 4. Memory Management  

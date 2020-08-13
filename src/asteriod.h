@@ -8,7 +8,8 @@ class Asteriod : public GameObject {
     public:
         Asteriod(int grid_w, int grid_h);
 
-        void Update();
+        void Move();
+
     private:
         SDL_Point NewAsteriod();
 
