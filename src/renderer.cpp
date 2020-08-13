@@ -74,16 +74,14 @@ void Renderer::Render(Snake *snake, SDL_Point const &food)
     }
 
     // Render snake's head
+    Color *snakeHeadColor = snake->GetHeadColor();
     block.x = static_cast<int>(snake->head_x) * block.w;
     block.y = static_cast<int>(snake->head_y) * block.h;
-    if (snake->alive)
-    {
-        SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
-    }
-    else
-    {
-        SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
-    }
+    SDL_SetRenderDrawColor(sdl_renderer,
+                           snakeHeadColor->r,
+                           snakeHeadColor->g,
+                           snakeHeadColor->b,
+                           snakeHeadColor->a);
     SDL_RenderFillRect(sdl_renderer, &block);
 
     // Update Screen

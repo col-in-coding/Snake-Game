@@ -77,6 +77,7 @@ void Snake::Move(SDL_Point &current_head_cell, SDL_Point &prev_head_cell)
         if (current_head_cell.x == item.x && current_head_cell.y == item.y)
         {
             alive = false;
+            UpdateHeadColor(new Color(0xFF, 0x00, 0x00, 0xFF));
         }
     }
 }
@@ -105,4 +106,9 @@ void Snake::SetColor()
     std::cout << 0x7A << "\n";
     _headColor = std::make_unique<Color>(0x00, 0x7A, 0xCC, 0xFF);
     _bodyColor = std::make_unique<Color>(0xFF, 0xFF, 0xFF, 0xFF);
+}
+
+void Snake::UpdateHeadColor(Color *color)
+{
+    _headColor.reset(color);
 }

@@ -13,6 +13,7 @@ public:
     // getter and setter
     Color *GetBodyColor(){return _bodyColor.get();}
     Color *GetHeadColor(){return _headColor.get();}
+    void UpdateHeadColor(Color *color);
 
     void Move();
 
