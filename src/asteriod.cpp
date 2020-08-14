@@ -12,7 +12,7 @@ Asteriod::Asteriod()
 Asteriod::Asteriod(int grid_w, int grid_h) : GameObject(grid_w, grid_h)
 {
     SetColor(std::make_unique<Color>(0xFF, 0x00, 0x00, 0xFF));
-    SetBodyCell();
+    ResetBodyCell();
     _vx = 0.05f;
     _vy = 0.05f;
 }
@@ -23,11 +23,14 @@ Asteriod::~Asteriod(){
 
 void Asteriod::Move()
 {
-    // int size = body.size()
-    // for (SDL_Point &point : body)
-    // {
-    //     point.x += _vx;
-    // }
+    _nextx += _vx;
+    _nexty += _vy;
+    
+    SDL_Point next_cell{
+        static_cast<int>(_nextx),
+        static_cast<int>(_nexty)
+    };
+    body[0] = next_cell;
 }
 
 // bool Asteriod::IsAsteriodCell(int x, int y)
@@ -35,13 +38,13 @@ void Asteriod::Move()
 //     return false;
 // }
 
-void Asteriod::SetBodyCell()
+void Asteriod::ResetBodyCell()
 {
-    int body_x = 0;
-    int body_y = 3;
+    _nextx = 0;
+    _nexty = 3;
 
     SDL_Point bodyCell{
-        static_cast<int>(body_x),
-        static_cast<int>(body_y)};
+        static_cast<int>(_nextx),
+        static_cast<int>(_nexty)};
     body.emplace_back(bodyCell);
 }

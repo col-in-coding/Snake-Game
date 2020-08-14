@@ -25,7 +25,9 @@ class Asteriod : public GameObject
         // Velocity of the asteriod
         float _vx;
         float _vy;
-        void SetBodyCell();
+        float _nextx;
+        float _nexty;
+        void ResetBodyCell();
 };
 
 #endif
