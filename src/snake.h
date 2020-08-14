@@ -19,6 +19,8 @@ public:
 
     // Move the Snake. (override virtual function)
     void Move();
+    // Move Body (overload)
+    void Move(SDL_Point &current_cell, SDL_Point &prev_cell);
 
     void GrowBody();
 
@@ -40,9 +42,6 @@ private:
 
     void MoveHead();
 
-    // Move Body
-    void Move(SDL_Point &current_cell, SDL_Point &prev_cell);
-    
     // overwrite the SetColor from GameObject
     void SetColor();
 };

@@ -38,7 +38,7 @@ public:
     void SpeedUp() {_speed += 0.02;}
 
     // Pure virtual function for the abstract class
-    // virtual void Move() = 0;
+    virtual void Move() = 0;
 
 protected:
     bool growing{false};

@@ -24,7 +24,6 @@ Game::~Game()
   {
     delete _asteriod;
   }
-  
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
