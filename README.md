@@ -58,18 +58,19 @@ The playing of this snake game is pretty like the traditional one, but with the 
     * *game_object.h line 33-36*
     * *snake.h  line 14-15*
 - [x] Classes follow an appropriate inheritance hierarchy  
-    * *game_object.h* 
+    * *game_object.h*  
 - [x] Overloaded functions allow the same function to operate on different parameters 
-    * *snake.h  line 36* 
+    * *snake.h  line 36*  
 - [x] Derived class functions override virtual base class function 
-    * *game_object.h  line 39* 
-- [ ] Templates generalize functions in the project  
+    * *game_object.h  line 39*  
+- [x] Templates generalize functions in the project  
+    * *game.h line 26*
 
 4. Memory Management  
 - [x] The project makes use of references in function declarations  
     * *snake.h  line 38*
 - [x] The project uses destructors approprately  
-    * *game.h  line 16*
+    * *game.h  line 17*
 - [x] The project uses scope Resource Acquisition Is Initialization (RAII) where appropriate  
     * *game.cpp  line 21*
 - [ ] The project follows the Rule of 5  

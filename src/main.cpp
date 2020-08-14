@@ -22,8 +22,8 @@ int main() {
   Game game(kGridWidth, kGridHeight);
   game.Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
-  std::cout << "Score: " << game.GetScore() << "\n";
-  std::cout << "Size: " << game.GetSize() << "\n";
+  game.print("Score", game.GetScore());
+  game.print("Size", game.GetSize());
 
   std::ofstream file_writer("scores.txt", std::ios::app);
   if (file_writer.is_open())
