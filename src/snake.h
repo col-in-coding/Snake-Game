@@ -3,6 +3,7 @@
 
 #include "SDL.h"
 #include "game_object.h"
+#include "asteriod.h"
 
 class Snake : public GameObject
 {
@@ -10,9 +11,11 @@ public:
     Snake(int grid_w, int grid_h);
 
     // getter and setter
+    void SetAsteriod(Asteriod *asteriod);
     Color *GetBodyColor(){return _bodyColor.get();}
     Color *GetHeadColor(){return _headColor.get();}
     void UpdateHeadColor(Color *color);
+    void UpdateBodyColor(Color *color);
 
     // Move the Snake. (override virtual function)
     void Move();
@@ -31,6 +34,9 @@ public:
 private:
     // data handles (owned)
     std::unique_ptr<Color> _headColor;
+
+    // data handles (not owned)
+    Asteriod *_asteriod;
 
     void MoveHead();
 

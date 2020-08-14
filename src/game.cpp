@@ -11,6 +11,7 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       random_h(0, static_cast<int>(grid_height - 1)) {
   _snake = std::make_unique<Snake>(grid_width, grid_height);
   _asteriod = new Asteriod(grid_width, grid_height);
+  _snake->SetAsteriod(_asteriod);
   PlaceFood();
 }
 

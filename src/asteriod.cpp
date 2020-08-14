@@ -38,10 +38,10 @@ void Asteriod::Move()
     }
 }
 
-// bool Asteriod::IsAsteriodCell(int x, int y)
-// {
-//     return false;
-// }
+bool Asteriod::IsAsteriodCell(const int &x, const int &y)
+{
+    return x == body[0].x && y == body[0].y;
+}
 
 void Asteriod::Reset()
 {

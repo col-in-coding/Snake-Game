@@ -19,7 +19,7 @@ class Asteriod : public GameObject
         void Move();
 
         // Check if is Asteriod Cell
-        // bool IsAsteriodCell(int x, int y);
+        bool IsAsteriodCell(const int &x, const int &y);
     
     private:
         // Velocity of the asteriod

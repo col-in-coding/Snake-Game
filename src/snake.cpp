@@ -81,6 +81,11 @@ void Snake::Move(SDL_Point &current_head_cell, SDL_Point &prev_head_cell)
             alive = false;
             UpdateHeadColor(new Color(0xFF, 0x00, 0x00, 0xFF));
         }
+        if (_asteriod->IsAsteriodCell(item.x, item.y))
+        {
+            alive = false;
+            UpdateBodyColor(new Color(0xFF, 0x00, 0x00, 0xFF));
+        }
     }
 }
 
@@ -113,4 +118,14 @@ void Snake::SetColor()
 void Snake::UpdateHeadColor(Color *color)
 {
     _headColor.reset(color);
+}
+
+void Snake::UpdateBodyColor(Color *color)
+{
+    _bodyColor.reset(color);
+}
+
+void Snake::SetAsteriod(Asteriod *asteriod)
+{
+    _asteriod = asteriod;
 }
