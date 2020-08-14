@@ -13,7 +13,8 @@ class Game
 {
 public:
   Game(std::size_t grid_width, std::size_t grid_height);
-  
+  ~Game();
+
   // getter and setter
   int GetScore() const;
 
@@ -24,6 +25,7 @@ public:
 private:
   // data handle (owned)
   std::unique_ptr<Snake> _snake;
+  Asteriod *_asteriod;
   SDL_Point food;
 
   std::random_device dev;

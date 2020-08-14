@@ -1,7 +1,6 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
-#include <vector>
 #include "SDL.h"
 #include "game_object.h"
 
@@ -20,7 +19,7 @@ public:
 
     void GrowBody();
 
-    // If is Snake Cell
+    // Check if is Snake Cell
     bool SnakeCell(int x, int y);
 
     int size{1};

@@ -1,4 +1,6 @@
 #include "game.h"
+#include "asteriod.h"
+
 #include <iostream>
 #include <memory>
 #include "SDL.h"
@@ -8,7 +10,17 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
   _snake = std::make_unique<Snake>(grid_width, grid_height);
+  _asteriod = new Asteriod(grid_width, grid_height);
   PlaceFood();
+}
+
+Game::~Game()
+{
+  if (_asteriod != nullptr)
+  {
+    delete _asteriod;
+  }
+  
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -26,7 +38,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, _snake.get());
     Update();
-    renderer.Render(_snake.get(), food);
+    renderer.Render(_snake.get(), _asteriod, food);
 
     frame_end = SDL_GetTicks();
 
@@ -71,6 +83,7 @@ void Game::Update() {
   if (!_snake->alive) return;
 
   _snake->Move();
+  _asteriod->Move();
 
   int new_x = static_cast<int>(_snake->head_x);
   int new_y = static_cast<int>(_snake->head_y);

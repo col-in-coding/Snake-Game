@@ -26,7 +26,9 @@ public:
     }
     GameObject(int grid_width, int grid_height)
         :grid_width(grid_width), grid_height(grid_height){}
+
     Direction direction = Direction::kUp;
+
     std::vector<SDL_Point> body;
     
     // getter and setter
@@ -36,7 +38,7 @@ public:
     void SpeedUp() {_speed += 0.02;}
 
     // Pure virtual function for the abstract class
-    virtual void Move() = 0;
+    // virtual void Move() = 0;
 
 protected:
     bool growing{false};

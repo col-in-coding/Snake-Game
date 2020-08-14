@@ -4,15 +4,28 @@
 #include "SDL.h"
 #include "game_object.h"
 
-class Asteriod : public GameObject {
+class Asteriod : public GameObject
+{
     public:
+        Asteriod();
+        ~Asteriod();
+        
         Asteriod(int grid_w, int grid_h);
 
+        // getter and setter
+        Color *GetBodyColor(){return _bodyColor.get();}
+
+        // Move the Asteriod. (override virtual function)
         void Move();
 
+        // Check if is Asteriod Cell
+        // bool IsAsteriodCell(int x, int y);
+    
     private:
-        SDL_Point NewAsteriod();
-
+        // Velocity of the asteriod
+        float _vx;
+        float _vy;
+        void SetBodyCell();
 };
 
 #endif

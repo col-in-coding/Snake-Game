@@ -4,6 +4,7 @@
 #include <vector>
 #include "SDL.h"
 #include "snake.h"
+#include "asteriod.h"
 
 class Renderer
 {
@@ -12,7 +13,7 @@ public:
              const std::size_t grid_width, const std::size_t grid_height);
     ~Renderer();
 
-    void Render(Snake *snake, SDL_Point const &food);
+    void Render(Snake *snake, Asteriod *asteroid, SDL_Point const &food);
     void UpdateWindowTitle(int score, int fps);
 
 private:

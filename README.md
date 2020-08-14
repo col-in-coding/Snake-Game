@@ -67,10 +67,11 @@ The playing of this snake game is pretty like the traditional one, but with the 
 
 4. Memory Management  
 - [x] The project makes use of references in function declarations  
-    * *snake.h  line 33*
-- [ ] The project uses destructors approprately  
-
-- [ ] The project uses scope Resource Acquisition Is Initialization (RAII) where appropriate  
+    * *snake.h  line 38*
+- [x] The project uses destructors approprately  
+    * *game.h  line 16*
+- [x] The project uses scope Resource Acquisition Is Initialization (RAII) where appropriate  
+    * *game.cpp  line 21*
 - [ ] The project follows the Rule of 5  
 - [x] The project uses move semantics to move data, instead of copying it, where possible
     * *snake.cpp SetColor*

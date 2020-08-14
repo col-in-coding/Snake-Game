@@ -2,21 +2,46 @@
 #include "game_object.h"
 
 #include "SDL.h"
+#include <iostream>
 
-Asteriod::Asteriod(int grid_w, int grid_h)
+Asteriod::Asteriod()
 {
-    grid_width = grid_w;
-    grid_height = grid_h;
-    speed = 0.1;
-  
+    std::cout << "Asteriod Constructor" << "\n";
 }
 
-void Asteriod::Update()
+Asteriod::Asteriod(int grid_w, int grid_h) : GameObject(grid_w, grid_h)
 {
-  
+    SetColor(std::make_unique<Color>(0xFF, 0x00, 0x00, 0xFF));
+    SetBodyCell();
+    _vx = 0.05f;
+    _vy = 0.05f;
 }
 
-SDL_Point Asteriod::NewAsteriod()
+Asteriod::~Asteriod(){
+    std::cout << "Asteriod Destructor" << "\n";
+}
+
+void Asteriod::Move()
 {
-    
+    // int size = body.size()
+    // for (SDL_Point &point : body)
+    // {
+    //     point.x += _vx;
+    // }
+}
+
+// bool Asteriod::IsAsteriodCell(int x, int y)
+// {
+//     return false;
+// }
+
+void Asteriod::SetBodyCell()
+{
+    int body_x = 0;
+    int body_y = 3;
+
+    SDL_Point bodyCell{
+        static_cast<int>(body_x),
+        static_cast<int>(body_y)};
+    body.emplace_back(bodyCell);
 }
