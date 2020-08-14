@@ -27,7 +27,7 @@ class Asteriod : public GameObject
         float _vy;
         float _nextx;
         float _nexty;
-        void ResetBodyCell();
+        void Reset();
 };
 
 #endif
