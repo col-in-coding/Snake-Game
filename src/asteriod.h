@@ -11,6 +11,10 @@ class Asteriod : public GameObject
         ~Asteriod();
         
         Asteriod(int grid_w, int grid_h);
+        Asteriod(const Asteriod &source);
+        Asteriod(Asteriod &&source);
+        Asteriod& operator=(const Asteriod &source);
+        Asteriod& operator=(Asteriod &&source);
 
         // getter and setter
         Color *GetBodyColor(){return _bodyColor.get();}

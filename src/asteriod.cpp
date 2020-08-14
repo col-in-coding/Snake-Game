@@ -6,15 +6,60 @@
 
 Asteriod::Asteriod()
 {
-    std::cout << "Asteriod Constructor" << "\n";
+    std::cout << "Asteriod Constructor1" << "\n";
 }
 
 Asteriod::Asteriod(int grid_w, int grid_h) : GameObject(grid_w, grid_h)
 {
-    std::cout << "Asteriod Overload Constructor" << "\n";
+    std::cout << "Asteriod Constructor2" << "\n";
 
     SetColor(std::make_unique<Color>(0xFF, 0x00, 0x00, 0xFF));
     Reset();
+}
+
+Asteriod::Asteriod(const Asteriod &source)
+{
+    std::cout << "Asteriod Copy Constructor" << '\n';
+    grid_width = source.grid_width;
+    grid_height = source.grid_height;
+    _bodyColor = std::make_unique<Color>(source._bodyColor->r,
+                                         source._bodyColor->g,
+                                         source._bodyColor->b,
+                                         source._bodyColor->a);
+    Reset();
+}
+
+Asteriod::Asteriod(Asteriod &&source)
+{
+    std::cout << "Asteriod Move Constructor" << '\n';
+    grid_width = source.grid_width;
+    grid_height = source.grid_height;
+    _bodyColor = std::move(source._bodyColor);
+    Reset();
+}
+
+Asteriod& Asteriod::operator=(const Asteriod &source)
+{
+    std::cout << "Asteriod Assignment Operation" << '\n';
+    grid_width = source.grid_width;
+    grid_height = source.grid_height;
+    _bodyColor = std::make_unique<Color>(source._bodyColor->r,
+                                         source._bodyColor->g,
+                                         source._bodyColor->b,
+                                         source._bodyColor->a);
+    Reset();
+    return *this;
+}
+
+Asteriod& Asteriod::operator=(Asteriod &&source)
+{
+    std::cout << "Asteriod Move Assignment" << '\n';
+    std::cout << "Asteriod Move Constructor" << '\n';
+    grid_width = source.grid_width;
+    grid_height = source.grid_height;
+    _bodyColor = std::move(source._bodyColor);
+    Reset();
+    return *this;
 }
 
 Asteriod::~Asteriod(){

@@ -110,7 +110,6 @@ bool Snake::SnakeCell(int x, int y)
 
 void Snake::SetColor()
 {
-    std::cout << 0x7A << "\n";
     _headColor = std::make_unique<Color>(0x00, 0x7A, 0xCC, 0xFF);
     _bodyColor = std::make_unique<Color>(0xFF, 0xFF, 0xFF, 0xFF);
 }

@@ -4,8 +4,10 @@ This project is start from the Capstone project in the [Udacity C++ Nanodegree P
 
 <img src="snake_game.gif"/>
 
-The playing of this snake game is pretty like the traditional one, but with the extra features:
-1. Asteriod
+
+## How to play
+The playing of this snake game is pretty like the traditional one, but be careful with the Asteriod.
+Asteriod is comming randomly from left top corner, whenever your tiny beauty is hit by it, the game ends.
 
 
 ## Dependencies for Running Locally
@@ -73,7 +75,8 @@ The playing of this snake game is pretty like the traditional one, but with the 
     * *game.h  line 17*
 - [x] The project uses scope Resource Acquisition Is Initialization (RAII) where appropriate  
     * *game.cpp  line 21*
-- [ ] The project follows the Rule of 5  
+- [x] The project follows the Rule of 5  
+    * *asteriod.h  line 10-17*
 - [x] The project uses move semantics to move data, instead of copying it, where possible
     * *snake.cpp SetColor*
 - [x] The project uses smart pointers instead of raw pointers
